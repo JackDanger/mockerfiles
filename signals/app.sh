@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Current process id: $$"
+
 catch_1() {
   echo "trapped signal 1"
 }
