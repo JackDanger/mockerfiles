@@ -6,8 +6,8 @@ Test with:
 
     cd netcat
     image=$(docker build . | tail -n 1 | awk '{print $3}')
-    docker run -P -p 8999:9000 $image
+    docker run -it -p 8000:8000 $image
 
 And in another terminal:
-    echo "hi" | localhost 10000
+    echo "hi" | nc localhost 8000
 
